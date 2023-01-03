@@ -59,8 +59,24 @@ public class ThirdPersonShooterController : MonoBehaviour
             Instantiate(pfBulletProjectile, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
             starterAssetsInputs.shoot = false;
 
+            //this is what turns the cam towards shot and its very messy and repetitive 
+                aimVirtualCamera.gameObject.SetActive(true);
+                thirdPersonController.SetSensitivity(aimSensitivity);
+                thirdPersonController.SetRotateOnMove(false);
+
+                Vector3 worldAimTarget = mouseWorldPosition;
+                worldAimTarget.y = transform.position.y;
+                Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
+
+                transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 1000f);
+        } else
+         {
+                aimVirtualCamera.gameObject.SetActive(false);
+                thirdPersonController.SetSensitivity(normalSensitivity);
+                thirdPersonController.SetRotateOnMove(true);
+         }
+
         }
 
     }
-        
-}
+       
