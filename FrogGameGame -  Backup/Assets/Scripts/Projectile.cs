@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static EnemyOne;
 
 public class Projectile : MonoBehaviour
 {
     private Rigidbody bulletRigidbody;
+
+    EnemyOne TakeDamage;
 
     private void Awake()
     {
@@ -17,8 +20,15 @@ public class Projectile : MonoBehaviour
         bulletRigidbody.velocity = transform.forward * speed;
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider triggerCollider)
     {
+
+        if(triggerCollider.gameObject.TryGetComponent<EnemyOne>(out EnemyOne enemyComponent))
+        {
+            enemyComponent.TakeDamage(20);
+        }
+
+        print(triggerCollider.gameObject.name);
         Destroy(gameObject);
     }
 }
