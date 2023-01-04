@@ -14,6 +14,7 @@ namespace StarterAssets
 		public bool sprint;
         public bool aim;
         public bool shoot;
+		//public bool fireBlast;
 
         [Header("Movement Settings")]
 		public bool analogMovement;
@@ -55,6 +56,11 @@ namespace StarterAssets
 		{
 			ShootInput(value.isPressed);
 		}
+
+		//public void OnFireBlast(InputValue value)
+		//{
+			//FireBlastInput(value.isPressed);
+		//}
 
 #endif
 
@@ -98,6 +104,11 @@ namespace StarterAssets
 		{
 			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
 		}
-	}
+
+        //public void FireBlast(bool newFireBlastState)
+        //{
+            //fireBlast = newFireBlastState;
+        //}
+    }
 	
 }

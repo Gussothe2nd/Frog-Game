@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class FireBlastAbility : MonoBehaviour
+[CreateAssetMenu]
+public class FireBlastAbility : BaseAbilityClass
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public float FireBlastRange;
+
+    public override void Activate(GameObject parent)
     {
-        
+        //Instantiate(pfFireBlast, SpawnFireBlastPos.position, SpawnFireBlastPos.rotation);
+
+        AbilityList abilityList = parent.GetComponent<AbilityList>();
+
+        Instantiate(abilityList.pfFireBlast, abilityList.SpawnFireBlastPos.position, abilityList.SpawnFireBlastPos.rotation);
     }
 }
