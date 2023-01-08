@@ -9,6 +9,13 @@ public class AbilityHolder : MonoBehaviour
     public float cooldownTime;
     float activeTime;
 
+    void Start()
+    {
+        CoolDownVisual.SetMaxCoolDownVisual(ability.cooldownTime);
+        UpdateAbilityVisual(cooldownTime);
+
+    }
+
     enum AbilityState
     {
         ready,
@@ -21,6 +28,10 @@ public class AbilityHolder : MonoBehaviour
 
     void Update()
     {
+
+
+        //float percentageComplete = Time.deltaTime / abcooldownTime;
+
         switch (state)
         {
             case AbilityState.ready:
@@ -29,7 +40,7 @@ public class AbilityHolder : MonoBehaviour
                     ability.Activate(gameObject);
                     state = AbilityState.active;
                     activeTime = ability.activeTime;
-                    UpdateAbilityVisual(ability.cooldownTime);
+                    //UpdateAbilityVisual(cooldownTime);
                 }
             break;
             case AbilityState.active:
@@ -58,7 +69,6 @@ public class AbilityHolder : MonoBehaviour
 
     }
 
-    
     public void UpdateAbilityVisual(float cooldownTime)
     {
         CoolDownVisual.ShowCoolDownTime(cooldownTime);
