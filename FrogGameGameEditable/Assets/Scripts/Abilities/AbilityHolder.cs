@@ -5,7 +5,8 @@ using UnityEngine;
 public class AbilityHolder : MonoBehaviour
 {
     public BaseAbilityClass ability;
-    float cooldownTime;
+    public AbilityVisual CoolDownVisual;
+    public float cooldownTime;
     float activeTime;
 
     enum AbilityState
@@ -28,6 +29,7 @@ public class AbilityHolder : MonoBehaviour
                     ability.Activate(gameObject);
                     state = AbilityState.active;
                     activeTime = ability.activeTime;
+                    UpdateAbilityVisual(ability.cooldownTime);
                 }
             break;
             case AbilityState.active:
@@ -44,6 +46,7 @@ public class AbilityHolder : MonoBehaviour
             case AbilityState.cooldown:
                 if (cooldownTime > 0) {
                     cooldownTime -= Time.deltaTime;
+                    UpdateAbilityVisual(cooldownTime -= Time.deltaTime);
                 }
                 else
                 {
@@ -53,5 +56,11 @@ public class AbilityHolder : MonoBehaviour
 
         }
 
+    }
+
+    
+    public void UpdateAbilityVisual(float cooldownTime)
+    {
+        CoolDownVisual.ShowCoolDownTime(cooldownTime);
     }
 }

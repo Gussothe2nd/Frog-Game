@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static EnemyOne;
+//using static EnemyOne; don't seem to need this
 
 public class Projectile : MonoBehaviour
 {
