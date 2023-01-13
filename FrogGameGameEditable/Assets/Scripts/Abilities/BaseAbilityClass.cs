@@ -9,8 +9,10 @@ public class BaseAbilityClass : ScriptableObject
     public float cooldownTime;
     public float activeTime;
 
-    public virtual void Activate(GameObject parent)
-    {
+    public virtual void Activate(GameObject parent) {}
+    //public virtual void BeginCooldown(GameObject parent) {}
+    public virtual void ActivateMultiple(GameObject parent) {}
+    public virtual void DestroyObject(GameObject parent) {}
 
-    }
+
 }
