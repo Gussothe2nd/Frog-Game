@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0c6851f93e8171479c50c78b7c89d2d, type: 3}
-  m_Name: Fire Blast Ability
+  m_Script: {fileID: 11500000, guid: 90aca793e5b0fe445ba683d5b7115c98, type: 3}
+  m_Name: BeamAbility
   m_EditorClassIdentifier: 
-  name: FireBlast
-  cooldownTime: 5
-  activeTime: 0.5
-  FireBlastRange: 0
+  name: 
+  cooldownTime: 4
+  activeTime: 2

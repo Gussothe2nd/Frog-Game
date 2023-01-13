@@ -11,10 +11,11 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera aimVirtualCamera;
     [SerializeField] private float normalSensitivity;
     [SerializeField] private float aimSensitivity;
-    [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
-    [SerializeField] private Transform debugTransform;
+    [SerializeField] public LayerMask aimColliderLayerMask = new LayerMask();
+    [SerializeField] public Transform debugTransform;
     [SerializeField] private Transform pfBulletProjectile;
-    [SerializeField] private Transform spawnBulletPosition;
+    [SerializeField] public Transform spawnBulletPosition;
+    
 
     private ThirdPersonController thirdPersonController;
     private StarterAssetsInputs starterAssetsInputs;
@@ -26,7 +27,7 @@ public class ThirdPersonShooterController : MonoBehaviour
 
     }
 
-    private void Update () {
+    public void Update () {
         Vector3 mouseWorldPosition = Vector3.zero;
 
         Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
@@ -76,7 +77,7 @@ public class ThirdPersonShooterController : MonoBehaviour
                 //thirdPersonController.SetRotateOnMove(true);
          }
 
+
         }
 
     }
-       

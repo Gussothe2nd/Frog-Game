@@ -6,7 +6,7 @@ public class AbilityHolder : MonoBehaviour
 {
     public BaseAbilityClass ability;
     public AbilityVisual CoolDownVisual;
-    public float cooldownTime;
+    float cooldownTime;
     float activeTime;
 
     void Start()
@@ -26,11 +26,8 @@ public class AbilityHolder : MonoBehaviour
 
     public KeyCode key;
 
-    void Update()
+    public void Update()
     {
-
-
-        //float percentageComplete = Time.deltaTime / abcooldownTime;
 
         switch (state)
         {
@@ -41,15 +38,24 @@ public class AbilityHolder : MonoBehaviour
                     state = AbilityState.active;
                     activeTime = ability.activeTime;
                     //UpdateAbilityVisual(cooldownTime);
+                    //FireAbility(true);
+
                 }
             break;
+                //case AbilityState.ready
+                    //if (MultipleShots(true))
+                //{
+
+                //}
             case AbilityState.active:
                 if (activeTime > 0)
                 {
+                    ability.ActivateMultiple(gameObject);
                     activeTime -= Time.deltaTime;
                 }
                 else
                 {
+                    //ability.BeginCooldown(gameObject);
                     state = AbilityState.cooldown;
                     cooldownTime = ability.cooldownTime;
                 }
@@ -58,6 +64,7 @@ public class AbilityHolder : MonoBehaviour
                 if (cooldownTime > 0) {
                     cooldownTime -= Time.deltaTime;
                     UpdateAbilityVisual(cooldownTime -= Time.deltaTime);
+                    ability.DestroyObject(gameObject);
                 }
                 else
                 {
@@ -73,4 +80,17 @@ public class AbilityHolder : MonoBehaviour
     {
         CoolDownVisual.ShowCoolDownTime(cooldownTime);
     }
+
+
+
+    //public void FireAbility(bool activeTime)
+    //{
+        //ability.EnableLaser(true);
+    //}
+
+    //public void UpdateLaserPosition()
+    //{
+    //}
+
+
 }
