@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 477810067}
   - component: {fileID: 477810069}
   - component: {fileID: 477810068}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -749,7 +749,7 @@ GameObject:
   - component: {fileID: 755831446}
   - component: {fileID: 755831445}
   - component: {fileID: 755831449}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -862,7 +862,7 @@ GameObject:
   - component: {fileID: 763687483}
   - component: {fileID: 763687485}
   - component: {fileID: 763687484}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1910,7 +1910,7 @@ GameObject:
   - component: {fileID: 1397388157}
   - component: {fileID: 1397388159}
   - component: {fileID: 1397388158}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Boarder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2270,7 +2270,7 @@ GameObject:
   - component: {fileID: 1690646889}
   - component: {fileID: 1690646891}
   - component: {fileID: 1690646890}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TempModelEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2418,7 +2418,7 @@ GameObject:
   - component: {fileID: 1785451823}
   - component: {fileID: 1785451825}
   - component: {fileID: 1785451824}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2684,7 +2684,7 @@ GameObject:
   - component: {fileID: 2119878498}
   - component: {fileID: 2119878500}
   - component: {fileID: 2119878499}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

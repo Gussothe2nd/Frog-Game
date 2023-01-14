@@ -13,6 +13,7 @@ public class BeamAbility : BaseAbilityClass
 {
     //private Transform spawnedLaser;
     private GameObject spawnedLaser;
+    //private GameObject spawnedLaserDamage;
 
     //void Awake()
     //{
@@ -42,6 +43,7 @@ public class BeamAbility : BaseAbilityClass
         Vector3 aimDir = (mouseWorldPosition - thirdPersonShooterController.spawnBulletPosition.position).normalized;
 
             spawnedLaser = Instantiate(abilityList.pfBeam, thirdPersonShooterController.spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up)) as GameObject;
+            //spawnedLaserDamage = Instantiate(abilityList.BeamDamage, thirdPersonShooterController.spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up)) as GameObject;
 
 
         //abilityList.EnableLaser();

@@ -14,4 +14,6 @@ public class AbilityList : MonoBehaviour
 
     [SerializeField] public GameObject SpawnBeam;
     [SerializeField] public GameObject pfBeam;
+    //[SerializeField] public GameObject BeamDamage;
+
 }
