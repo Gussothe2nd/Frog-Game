@@ -28,9 +28,25 @@ public class EnemyAI : MonoBehaviour
         {
             agent.SetDestination(target.position);
 
+            if (distance <= agent.stoppingDistance)
+            {
+                // Attack the Target
+                //Face the Target
+            }
+
         }
     }
 
+
+    void FaceTarget ()
+    {
+        Vector3 direction = (target.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+    }
+
+
+    //This just creates a red sphere in the editor menu to see the look radius
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
