@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cooldownTime: 4
-  activeTime: 2
+  activeTime: 99

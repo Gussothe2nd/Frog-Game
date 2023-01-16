@@ -5,6 +5,8 @@ using UnityEngine;
 public class LaserDamage : MonoBehaviour
 {
 
+    //[SerializeField] public LayerMask LaserColliderLayerMask = new LayerMask();
+
     EnemyOne TakeDamage;
 
     private Rigidbody LaserDamageRigidbody;
@@ -16,20 +18,20 @@ public class LaserDamage : MonoBehaviour
 
     //public GameObject Laser2
 
-    void start()
+    void Start()
     {
-        Physics.IgnoreLayerCollision(0, 2);
+        //Physics.IgnoreLayerCollision(0, 2);
     }
 
     void OnTriggerEnter(Collider triggerCollider)
     {
-        //Laser2 = GetGameObject
-        //Physics.IgnoreCollision
+
 
         if (triggerCollider.gameObject.TryGetComponent<EnemyOne>(out EnemyOne enemyComponent))
         {
             enemyComponent.TakeDamage(20);
         }
+        //Physics.IgnoreLayerCollision(0, 2);
 
         print(triggerCollider.gameObject.name);
 

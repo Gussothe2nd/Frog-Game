@@ -24,6 +24,7 @@ public class ThirdPersonShooterController : MonoBehaviour
     {
         thirdPersonController = GetComponent<ThirdPersonController>();
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();
+        //Physics.IgnoreLayerCollision(8);
 
     }
 
