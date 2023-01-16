@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0c6851f93e8171479c50c78b7c89d2d, type: 3}
-  m_Name: Fire Blast Ability
+  m_Name: FireBlastAbility
   m_EditorClassIdentifier: 
   name: FireBlast
   cooldownTime: 5

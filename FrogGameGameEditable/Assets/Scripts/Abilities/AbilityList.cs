@@ -12,8 +12,11 @@ public class AbilityList : MonoBehaviour
 
     //abilities that require aim position and weapon location
 
-    [SerializeField] public GameObject SpawnBeam;
+    //[SerializeField] public GameObject SpawnAbilityProjectile;
     [SerializeField] public GameObject pfBeam;
-    //[SerializeField] public GameObject BeamDamage;
+
+    [SerializeField] public Transform SpawnInFrontOfCharacterAbility;
+    [SerializeField] public GameObject pfFireWall;
+
 
 }

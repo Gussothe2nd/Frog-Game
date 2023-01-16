@@ -64,7 +64,7 @@ public class ThirdPersonShooterController : MonoBehaviour
             //this is what turns the cam towards shot and its very messy and repetitive 
                 //aimVirtualCamera.gameObject.SetActive(true);
                //thirdPersonController.SetSensitivity(aimSensitivity);
-               thirdPersonController.SetRotateOnMove(false);
+               //thirdPersonController.SetRotateOnMove(false);
 
                Vector3 worldAimTarget = mouseWorldPosition;
                 worldAimTarget.y = transform.position.y;

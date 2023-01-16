@@ -9,6 +9,13 @@ public class AbilityHolder : MonoBehaviour
     float cooldownTime;
     float activeTime;
 
+    //private void Awake()
+    //{
+        //ThirdPersonShooterController = GetComponent<ThirdPersonShooterController>();
+    //}
+
+    //private ThirdPersonShooterController ThirdPersonShooterController;
+
     void Start()
     {
         CoolDownVisual.SetMaxCoolDownVisual(ability.cooldownTime);
