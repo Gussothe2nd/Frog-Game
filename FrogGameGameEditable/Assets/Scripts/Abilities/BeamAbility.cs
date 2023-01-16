@@ -146,7 +146,22 @@ public class BeamAbility : BaseAbilityClass
         {
             spawnedLaser.transform.position = thirdPersonShooterController.spawnBulletPosition.position;
             spawnedLaser.transform.rotation = Quaternion.LookRotation(aimDir, Vector3.up);
+
+            // Copy into a variable. We can now make per-value changes.
+            //float newScale = spawnedLaser.transform.localScale;
+            //newScale.z *= raycastHit.point;
+
+            // Copy back into the transform.
+            //spawnedLaser.transform.localScale = newScale;
+
             spawnedLaser.transform.localScale = raycastHit.point;
+
+            //var newScale = new Vector3(
+            //spawnedLaser.transform.localScale.x * 1.1f,
+            //spawnedLaser.transform.localScale.y,
+            //spawnedLaser.transform.localScale.z);
+
+            //spawnedLaser.transform.localScale = newScale;
         }
 
         //if(GameObject parent.AbilityState.cooldown){
