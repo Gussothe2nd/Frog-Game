@@ -7,7 +7,7 @@ public class AbilityList : MonoBehaviour
 {
     //abilities that come out of player position
 
-    [SerializeField] public Transform pfFireBlast;
+    [SerializeField] public GameObject pfFireBlast;
     [SerializeField] public Transform SpawnFireBlastPos;
 
     //abilities that require aim position and weapon location

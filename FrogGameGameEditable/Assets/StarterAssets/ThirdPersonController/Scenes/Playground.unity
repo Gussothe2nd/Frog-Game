@@ -5561,7 +5561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b11770b1d9efa4b88e27aa96758b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pfFireBlast: {fileID: 8066556770678476473, guid: 11c9ae44a02ec4349966b8b399e30f4a, type: 3}
+  pfFireBlast: {fileID: 8417816215059511349, guid: 11c9ae44a02ec4349966b8b399e30f4a, type: 3}
   SpawnFireBlastPos: {fileID: 282367839}
   pfBeam: {fileID: 8654540180276383126, guid: 9393719a20c72cb419e4294b62f78130, type: 3}
   SpawnInFrontOfCharacterAbility: {fileID: 596501886}
