@@ -818,6 +818,7 @@ MonoBehaviour:
   - {fileID: 7876865423430813178, guid: 2e997097079b8994ca1401bb9fd4b037, type: 3}
   - {fileID: 7355275889933114088, guid: 9052efaf0992d9d49878e3ba994a2034, type: 3}
   - {fileID: 9100203192000264266, guid: 2ed52b11e3d912345a41263ecadcc5b4, type: 3}
+  - {fileID: 6793392089406244540, guid: 876738c1c688a35458aed7abf74dec32, type: 3}
   spawnPoint: {fileID: 364090611}
   label: {fileID: 889467784}
 --- !u!4 &992329196
