@@ -31,7 +31,7 @@ public class EnemyAI : MonoBehaviour
             if (distance <= agent.stoppingDistance)
             {
                 // Attack the Target
-                //Face the Target
+                FaceTarget();
             }
 
         }
