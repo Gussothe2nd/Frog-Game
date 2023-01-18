@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BeamAbility
   m_EditorClassIdentifier: 
   name: 
-  cooldownTime: 4
+  cooldownTime: 2
   activeTime: 99
