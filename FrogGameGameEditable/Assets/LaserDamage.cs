@@ -7,7 +7,7 @@ public class LaserDamage : MonoBehaviour
 
     //[SerializeField] public LayerMask LaserColliderLayerMask = new LayerMask();
 
-    EnemyOne TakeDamage;
+    HealthAmount TakeDamage;
 
     private Rigidbody LaserDamageRigidbody;
 
@@ -27,7 +27,7 @@ public class LaserDamage : MonoBehaviour
     {
 
 
-        if (triggerCollider.gameObject.TryGetComponent<EnemyOne>(out EnemyOne enemyComponent))
+        if (triggerCollider.gameObject.TryGetComponent<HealthAmount>(out HealthAmount enemyComponent))
         {
             enemyComponent.TakeDamage(20);
         }

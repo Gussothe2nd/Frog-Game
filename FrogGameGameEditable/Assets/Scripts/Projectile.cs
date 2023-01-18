@@ -7,7 +7,7 @@ public class Projectile : MonoBehaviour
 {
     private Rigidbody bulletRigidbody;
 
-    EnemyOne TakeDamage;
+    HealthAmount TakeDamage;
 
     private void Awake()
     {
@@ -23,7 +23,7 @@ public class Projectile : MonoBehaviour
     void OnTriggerEnter(Collider triggerCollider)
     {
 
-        if(triggerCollider.gameObject.TryGetComponent<EnemyOne>(out EnemyOne enemyComponent))
+        if(triggerCollider.gameObject.TryGetComponent<HealthAmount>(out HealthAmount enemyComponent))
         {
             enemyComponent.TakeDamage(20);
         }

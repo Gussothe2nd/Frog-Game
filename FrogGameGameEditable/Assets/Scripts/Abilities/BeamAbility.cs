@@ -154,14 +154,18 @@ public class BeamAbility : BaseAbilityClass
             // Copy back into the transform.
             //spawnedLaser.transform.localScale = newScale;
 
-            spawnedLaser.transform.localScale = raycastHit.point;
+           
 
             //var newScale = new Vector3(
-            //spawnedLaser.transform.localScale.x * 1.1f,
-            //spawnedLaser.transform.localScale.y,
-            //spawnedLaser.transform.localScale.z);
+           // spawnedLaser.transform.localScale.x * 1f,
+           // spawnedLaser.transform.localScale.y * 1f,
+           // spawnedLaser.transform.localScale.z * raycastHit.point.z);
 
-            //spawnedLaser.transform.localScale = newScale;
+          //  spawnedLaser.transform.localScale = newScale;
+
+            spawnedLaser.transform.localScale = raycastHit.point;
+
+            
         }
 
         //if(GameObject parent.AbilityState.cooldown){
@@ -189,4 +193,5 @@ public class BeamAbility : BaseAbilityClass
     //Instantiate(spawnedLaser);
     //}
 
+  
 }    
