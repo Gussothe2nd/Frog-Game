@@ -1,11 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using Cinemachine;
 using StarterAssets;
-//using UnityEngine.InputSystem;
-//using System.Collections.Specialized;
-//using static ThirdPersonShooterController;
+using System.Collections.Specialized;
+using System.Security.Cryptography;
 
 //WARNING i couldn't figure out how to refernce the mousewordpoint that was allready produced by thirdpersonshootercontroller so i recalculated it here. maybe we can fix this later
 [CreateAssetMenu]
@@ -13,13 +11,8 @@ public class BeamAbility : BaseAbilityClass
 {
     //private Transform spawnedLaser;
     private GameObject spawnedLaser;
-    //private GameObject spawnedLaserDamage;
 
-    //void Awake()
-    //{
-       //spawnedLaser = Instantiate(abilityList.pfBeam, thirdPersonShooterController.spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
-    //}
-
+    private Vector3 scaleChange, positionChange;
 
     public override void Activate(GameObject parent)
     {
@@ -46,79 +39,7 @@ public class BeamAbility : BaseAbilityClass
             //spawnedLaserDamage = Instantiate(abilityList.BeamDamage, thirdPersonShooterController.spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up)) as GameObject;
 
 
-        //abilityList.EnableLaser();
 
-        //if (thirdPersonShooterController.spawnBulletPosition != null)
-        //{
-        //Instantiate(abilityList.pfBeam, thirdPersonShooterController.spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up)).transform.position = thirdPersonShooterController.spawnBulletPosition.position;
-        //}
-
-
-        //Instantiate(abilityList.pfBeam, thirdPersonShooterController.spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
-
-        //spawnedLaser = Instantiate(abilityList.pfBeam.transform.gameObject, thirdPersonShooterController.spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up)) as GameObject;
-
-        //spawnedLaser = Instantiate(abilityList.pfBeam, thirdPersonShooterController.spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up)) as GameObject;
-
-        //Instantiate(spawnedLaser);
-
-        //void Update()
-        //{
-        //Instantiate(spawnedLaser);
-        //}
-
-        //EnableLaser();
-
-        //UpdateLaser();
-
-        //void EnableLaser()
-        //{
-        //spawnedLaser.SetActive(true);
-        //}
-
-
-        //void UpdateLaser()
-        //{
-
-        //if(thirdPersonShooterController.spawnBulletPosition != null)
-        //{
-        //spawnedLaser.transform.position = thirdPersonShooterController.spawnBulletPosition.position;
-        //}
-        //}
-
-        //void UpdateLaser()
-        //{
-        //spawnedLaser.transform.position = thirdPersonShooterController.spawnBulletPosition.position;
-
-        //}
-
-        //if (parent.cooldown)
-        //{
-        //EnableLaser();
-        //}
-
-        //if (parent.active)
-        //{
-        //UpdateLaser();
-        //}
-
-        //if (parent.cooldownTime > 0)
-        //{
-        //DisableLaser();
-        //}
-
-
-        //void EnableLaser()
-        //{
-        //Instantiate(abilityList.pfBeam, thirdPersonShooterController.spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
-        //}
-
-        //void UpdateLaser()
-        //{
-        //if(thirdPersonShooterController.spawnBulletPosition != null) { 
-        //Instantiate(abilityList.pfBeam, thirdPersonShooterController.spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up)).transform.position = thirdPersonShooterController.spawnBulletPosition.position;
-        //}
-        //}
     }
     public override void ActivateMultiple(GameObject parent)
     {
@@ -142,37 +63,32 @@ public class BeamAbility : BaseAbilityClass
 
         //spawnedLaser = Instantiate(abilityList.pfBeam, thirdPersonShooterController.spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up)) as GameObject;
 
-        if(thirdPersonShooterController.spawnBulletPosition != null)
+        float distance = Vector3.Distance(thirdPersonShooterController.spawnBulletPosition.position, raycastHit.point);
+
+        Vector3 middlePoint = thirdPersonShooterController.spawnBulletPosition.position + raycastHit.point / 2f;
+
+        //Vector3 middlePoint2 = thirdPersonShooterController.spawnBulletPosition.position - raycastHit.point;
+
+
+        if (thirdPersonShooterController.spawnBulletPosition != null)
         {
             spawnedLaser.transform.position = thirdPersonShooterController.spawnBulletPosition.position;
+
+            //spawnedLaser.transform.position = middlePoint;
+
+
             spawnedLaser.transform.rotation = Quaternion.LookRotation(aimDir, Vector3.up);
 
-            // Copy into a variable. We can now make per-value changes.
-            //float newScale = spawnedLaser.transform.localScale;
-            //newScale.z *= raycastHit.point;
-
-            // Copy back into the transform.
-            //spawnedLaser.transform.localScale = newScale;
-
-           
-
-            //var newScale = new Vector3(
-           // spawnedLaser.transform.localScale.x * 1f,
-           // spawnedLaser.transform.localScale.y * 1f,
-           // spawnedLaser.transform.localScale.z * raycastHit.point.z);
-
-          //  spawnedLaser.transform.localScale = newScale;
-
-            spawnedLaser.transform.localScale = raycastHit.point;
 
             
+            //spawnedLaser.transform.localScale = raycastHit.point;
+            
+            spawnedLaser.transform.localScale = new Vector3(spawnedLaser.transform.localScale.x, spawnedLaser.transform.localScale.x, distance);
+
+
+            spawnedLaser.transform.Translate(Vector3.forward * distance / 2f);
+
         }
-
-        //if(GameObject parent.AbilityState.cooldown){
-           //DestroyObject(spawnedLaser);
-        //}
-
-        //GameObject spawnedLaser;
 
 
     }
@@ -182,16 +98,7 @@ public class BeamAbility : BaseAbilityClass
         Destroy(spawnedLaser);
     }
 
-    //public override void BeginCooldown(GameObject parent)
-    //{
 
-    //}
-    //public override void BeginCooldown(GameObject parent)
-    //{
-    //void Update()
-    //{
-    //Instantiate(spawnedLaser);
-    //}
 
   
 }    
