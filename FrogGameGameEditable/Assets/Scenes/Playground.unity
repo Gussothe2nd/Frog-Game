@@ -3578,6 +3578,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9564c9d4890640e4b835c6d86c955658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _health: {fileID: 6982812147933622153}
+  _slider: {fileID: 2109857609}
+  _hpIndicator: {fileID: 396226305}
 --- !u!1 &2119878488
 GameObject:
   m_ObjectHideFlags: 0
@@ -4985,6 +4988,7 @@ GameObject:
   - component: {fileID: 6982812147933622149}
   - component: {fileID: 6982812147933622151}
   - component: {fileID: 6982812147933622152}
+  - component: {fileID: 6982812147933622153}
   m_Layer: 2
   m_Name: PlayerArmature
   m_TagString: Player
@@ -6157,6 +6161,40 @@ MonoBehaviour:
   ability: {fileID: 11400000, guid: 44626db43fd75764d91bdf2bffaa00ec, type: 2}
   CoolDownVisual: {fileID: 1202601364}
   key: 51
+--- !u!114 &6982812147933622153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416926083347132227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f6c5b2fcc199c44a6c73ec452db16c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHp: 100
+  Healed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2109857606}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Damaged:
+    m_PersistentCalls:
+      m_Calls: []
+  Died:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &6983258930626336602
 Transform:
   m_ObjectHideFlags: 0
