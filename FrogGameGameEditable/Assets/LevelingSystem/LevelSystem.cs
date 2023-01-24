@@ -22,7 +22,7 @@ public class LevelSystem
     public void AddExperience(int amount)
     {
         experience += amount;
-        if (experience >= experienceToNextLevel)
+        while (experience >= experienceToNextLevel)
         {
             //enough experience to level up
             level++;

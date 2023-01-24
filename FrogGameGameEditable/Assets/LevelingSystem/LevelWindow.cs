@@ -42,7 +42,7 @@ public class LevelWindow : MonoBehaviour
     {
         if (Input.GetKeyDown(key))
         {
-            levelSystem.AddExperience(5);
+            levelSystem.AddExperience(25);
         }
     }
 
