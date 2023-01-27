@@ -60,10 +60,10 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Ability1",
-                    "type": "Button",
-                    "id": "56570f9d-9c9c-439d-82ec-414ab11e6327",
-                    "expectedControlType": "Button",
+                    "name": "OpenSkillTree",
+                    "type": "PassThrough",
+                    "id": "66a8d2f0-8ecb-4158-b65b-bce4ea189452",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -270,12 +270,12 @@
                 },
                 {
                     "name": "",
-                    "id": "01e5dee6-a8ba-4d0a-b854-152b4964abe6",
-                    "path": "<Keyboard>/1",
+                    "id": "e37ef61f-7c5a-477e-b2d4-7eee61aacaaf",
+                    "path": "<Keyboard>/p",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "Ability1",
+                    "action": "OpenSkillTree",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

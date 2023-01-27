@@ -15,18 +15,27 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] public Transform debugTransform;
     [SerializeField] private Transform pfBulletProjectile;
     [SerializeField] public Transform spawnBulletPosition;
-    
+
+    // attempt to make skillTreeOverlay
+    [SerializeField] private GameObject SkillTreeCanvas;
+    private PlayerInput playerInput;
+
 
     private ThirdPersonController thirdPersonController;
     private StarterAssetsInputs starterAssetsInputs;
+    public KeyCode key;
 
     private void Awake()
     {
         thirdPersonController = GetComponent<ThirdPersonController>();
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();
-        //Physics.IgnoreLayerCollision(8);
-
+        playerInput = GetComponent<PlayerInput>();
     }
+
+    //void Start()
+    //{
+        //playerInput.enabled = true;
+    //}
 
     public void Update () {
         Vector3 mouseWorldPosition = Vector3.zero;
@@ -78,7 +87,23 @@ public class ThirdPersonShooterController : MonoBehaviour
                 //thirdPersonController.SetRotateOnMove(true);
          }
 
-
+        // attempt to make skillTreeOverlay
+        if (starterAssetsInputs.openSkillTree)
+        {
+            SkillTreeCanvas.gameObject.SetActive(true);
+            starterAssetsInputs.cursorLocked = false;
+            starterAssetsInputs.cursorInputForLook = false;
+            playerInput.enabled = false;
         }
 
+        if (Input.GetKeyDown(key))
+        {
+            playerInput.enabled = true;
+            SkillTreeCanvas.gameObject.SetActive(false);
+            starterAssetsInputs.openSkillTree = false;
+            starterAssetsInputs.cursorLocked = true;
+            starterAssetsInputs.cursorInputForLook = true;
+        }
     }
+
+}

@@ -14,7 +14,9 @@ namespace StarterAssets
 		public bool sprint;
         public bool aim;
         public bool shoot;
-		//public bool fireBlast;
+		public bool openSkillTree;
+		//public bool closeSkillTree
+		
 
         [Header("Movement Settings")]
 		public bool analogMovement;
@@ -57,10 +59,14 @@ namespace StarterAssets
 			ShootInput(value.isPressed);
 		}
 
-		//public void OnFireBlast(InputValue value)
-		//{
-			//FireBlastInput(value.isPressed);
-		//}
+		public void OnOpenSkillTree(InputValue value)
+		{
+			SkillTreeInput(value.isPressed);
+		}		
+		
+	
+
+
 
 #endif
 
@@ -93,6 +99,11 @@ namespace StarterAssets
         public void ShootInput(bool newShootState)
         {
             shoot = newShootState;
+        }        
+		
+		public void SkillTreeInput(bool newCanvasState)
+        {
+            openSkillTree = newCanvasState;
         }
 
         private void OnApplicationFocus(bool hasFocus)
@@ -105,10 +116,7 @@ namespace StarterAssets
 			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
 		}
 
-        //public void FireBlast(bool newFireBlastState)
-        //{
-            //fireBlast = newFireBlastState;
-        //}
+
     }
 	
 }

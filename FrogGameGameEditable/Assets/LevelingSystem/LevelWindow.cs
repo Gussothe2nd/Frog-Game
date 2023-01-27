@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
-using System.Diagnostics;
+using UnityEngine.SceneManagement;
+//using System.Diagnostics;
 
 public class LevelWindow : MonoBehaviour
 {
@@ -88,6 +89,11 @@ public class LevelWindow : MonoBehaviour
     {
         //level changed, update text
         SetExperienceBarSize(levelSystem.GetExperienceNormalized());
+    }
+
+    public void Fart()
+    {
+        Debug.Log("fart");
     }
 
 }

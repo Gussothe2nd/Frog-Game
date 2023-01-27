@@ -29,4 +29,10 @@ public class ClassSelection : MonoBehaviour
         PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
         SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
+
+
+    public void Fart()
+    {
+    Debug.Log("fart");
+    }
 }
