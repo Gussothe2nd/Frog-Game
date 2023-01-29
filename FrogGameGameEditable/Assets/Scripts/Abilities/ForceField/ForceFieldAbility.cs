@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class FireBlastAbility : BaseAbilityClass
+public class ForceFieldAbility : BaseAbilityClass
 {
 
     public float FireBlastRange;
@@ -17,7 +17,7 @@ public class FireBlastAbility : BaseAbilityClass
 
         AbilityList abilityList = parent.GetComponent<AbilityList>();
 
-        SpawnedFireBlast = Instantiate(abilityList.pfFireBlast, abilityList.SpawnPlayerPos.position, abilityList.SpawnPlayerPos.rotation) as GameObject;
+        SpawnedFireBlast = Instantiate(abilityList.pfForceField, abilityList.SpawnPlayerPos.position, abilityList.SpawnPlayerPos.rotation) as GameObject;
 
     }
 

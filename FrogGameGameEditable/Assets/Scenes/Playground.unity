@@ -3592,7 +3592,6 @@ GameObject:
   - component: {fileID: 2119878494}
   - component: {fileID: 2119878491}
   - component: {fileID: 2119878495}
-  - component: {fileID: 2119878496}
   - component: {fileID: 2119878497}
   - component: {fileID: 2119878498}
   - component: {fileID: 2119878500}
@@ -3647,22 +3646,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eb9aa7183709da429076edc5294507b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthAmountMax: 100
-  startingHealthAmount: 0
---- !u!114 &2119878496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119878488}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c9eaaaff2ea8ba46ac2613650a43836, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageParticleSystem: {fileID: 0}
-  healParticleSystem: {fileID: 0}
 --- !u!114 &2119878497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3779,6 +3762,7 @@ MonoBehaviour:
   sprint: 0
   aim: 0
   shoot: 0
+  openSkillTree: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -6099,6 +6083,8 @@ MonoBehaviour:
   debugTransform: {fileID: 256159774}
   pfBulletProjectile: {fileID: 8210991715225066259, guid: 54599d880936cab44ba4440b4c4311a1, type: 3}
   spawnBulletPosition: {fileID: 972875626}
+  SkillTreeCanvas: {fileID: 0}
+  key: 0
 --- !u!114 &6982812147933622149
 MonoBehaviour:
   m_ObjectHideFlags: 0
