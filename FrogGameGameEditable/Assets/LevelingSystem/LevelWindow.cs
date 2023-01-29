@@ -13,9 +13,6 @@ public class LevelWindow : MonoBehaviour
     [SerializeField] private Slider experienceBarFill;
     private LevelSystem levelSystem;
 
-    public Button five;
-    public Button fiftty;
-    public Button fiveHundred;
     public KeyCode key;
     //float multiplier 10f;
 
@@ -25,16 +22,6 @@ public class LevelWindow : MonoBehaviour
         
         //experienceBarFill = transform.Find("ExperienceBar").Find("Fill").GetComponent<Image>();
         experienceBarFill = transform.Find("ExperienceBar").GetComponent<Slider>();
-
-        //five = GetComponent<Button>();
-        //five.onClick.AddExperience(50);
-
-        //five.onClick.AddListener(btnClick);
-        //transform.Find("50XP").GetComponent<Button_UI>.ClickFunc = () => levelSystem.AddExperience(50);
-        //transform.Find("500XP").GetComponent<Button_UI>.ClickFunc = () => levelSystem.AddExperience(500);
-
-        //SetExperienceBarSize(50f);
-        //SetLevelNumber(7);
 
 
     }
@@ -46,11 +33,6 @@ public class LevelWindow : MonoBehaviour
             levelSystem.AddExperience(25);
         }
     }
-
-    //void btnClick()
-    //{
-    //UnityEngine.Debug.Log("button pressed");
-    //}
 
 
     private void SetExperienceBarSize(float experienceNormalized)
