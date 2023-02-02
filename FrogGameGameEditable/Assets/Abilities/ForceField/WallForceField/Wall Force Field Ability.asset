@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90aca793e5b0fe445ba683d5b7115c98, type: 3}
-  m_Name: BeamAbility
+  m_Script: {fileID: 11500000, guid: 2cd09411896712240a20451a95ec3c18, type: 3}
+  m_Name: Wall Force Field Ability
   m_EditorClassIdentifier: 
   name: 
-  cooldownTime: 2
-  activeTime: 99
+  cooldownTime: 1
+  activeTime: 4

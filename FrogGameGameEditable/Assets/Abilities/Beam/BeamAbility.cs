@@ -67,21 +67,14 @@ public class BeamAbility : BaseAbilityClass
 
         Vector3 middlePoint = thirdPersonShooterController.spawnBulletPosition.position + raycastHit.point / 2f;
 
-        //Vector3 middlePoint2 = thirdPersonShooterController.spawnBulletPosition.position - raycastHit.point;
 
 
         if (thirdPersonShooterController.spawnBulletPosition != null)
         {
             spawnedLaser.transform.position = thirdPersonShooterController.spawnBulletPosition.position;
 
-            //spawnedLaser.transform.position = middlePoint;
-
-
             spawnedLaser.transform.rotation = Quaternion.LookRotation(aimDir, Vector3.up);
 
-
-            
-            //spawnedLaser.transform.localScale = raycastHit.point;
             
             spawnedLaser.transform.localScale = new Vector3(spawnedLaser.transform.localScale.x, spawnedLaser.transform.localScale.x, distance);
 
@@ -89,16 +82,10 @@ public class BeamAbility : BaseAbilityClass
             spawnedLaser.transform.Translate(Vector3.forward * distance / 2f);
 
         }
-
-
     }
 
     public override void DestroyObject(GameObject parent)
     {
         Destroy(spawnedLaser);
     }
-
-
-
-  
 }    

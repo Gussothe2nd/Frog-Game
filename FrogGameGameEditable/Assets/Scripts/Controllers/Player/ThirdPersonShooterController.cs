@@ -12,9 +12,14 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] private float normalSensitivity;
     [SerializeField] private float aimSensitivity;
     [SerializeField] public LayerMask aimColliderLayerMask = new LayerMask();
+    [SerializeField] public LayerMask ShortRaycastColliderLayerMask = new LayerMask();
     [SerializeField] public Transform debugTransform;
+    [SerializeField] public Transform debugShortTransform;
     [SerializeField] private Transform pfBulletProjectile;
     [SerializeField] public Transform spawnBulletPosition;
+
+    //float for short debugtransform distance
+
 
     // attempt to make skillTreeOverlay
     [SerializeField] private GameObject SkillTreeCanvas;
@@ -32,11 +37,6 @@ public class ThirdPersonShooterController : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
     }
 
-    //void Start()
-    //{
-        //playerInput.enabled = true;
-    //}
-
     public void Update () {
         Vector3 mouseWorldPosition = Vector3.zero;
 
@@ -44,9 +44,15 @@ public class ThirdPersonShooterController : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
         if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask))
         {
-            debugTransform.position = raycastHit.point;
+            debugTransform.position = raycastHit.point;;
             mouseWorldPosition = raycastHit.point;
         }
+        if (Physics.Raycast(ray, out RaycastHit shortRaycastHit, 999f, ShortRaycastColliderLayerMask))
+        {
+            debugShortTransform.position = shortRaycastHit.point;
+            //mouseWorldPosition = shortRaycastHit.point;
+        }
+
         if (starterAssetsInputs.aim) {
             aimVirtualCamera.gameObject.SetActive(true);
             thirdPersonController.SetSensitivity(aimSensitivity);
@@ -63,6 +69,7 @@ public class ThirdPersonShooterController : MonoBehaviour
             thirdPersonController.SetSensitivity(normalSensitivity);
             thirdPersonController.SetRotateOnMove(true);
         }
+        //float distance = Vector3.Distance(spawnBulletPosition.position, raycastHit.point);
 
         if (starterAssetsInputs.shoot)
         {

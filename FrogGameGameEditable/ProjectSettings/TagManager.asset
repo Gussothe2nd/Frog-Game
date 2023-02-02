@@ -16,7 +16,7 @@ TagManager:
   - Enemy(s)
   - Map
   - Projectile
-  - 
+  - ShortRayCastCollider
   - 
   - 
   - 
