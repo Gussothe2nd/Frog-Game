@@ -1688,7 +1688,10 @@ GameObject:
   - component: {fileID: 947228285}
   - component: {fileID: 947228284}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 947228289}
+=======
+>>>>>>> parent of a657c177 (Deleted code monkeys bullshit)
 =======
 >>>>>>> parent of a657c177 (Deleted code monkeys bullshit)
   m_Layer: 0
@@ -3597,6 +3600,10 @@ GameObject:
   - component: {fileID: 2119878491}
   - component: {fileID: 2119878495}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  - component: {fileID: 2119878496}
+>>>>>>> parent of a657c177 (Deleted code monkeys bullshit)
 =======
   - component: {fileID: 2119878496}
 >>>>>>> parent of a657c177 (Deleted code monkeys bullshit)
@@ -3655,6 +3662,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
+--- !u!114 &2119878497
+=======
+  healthAmountMax: 100
+  startingHealthAmount: 0
+--- !u!114 &2119878496
+>>>>>>> parent of a657c177 (Deleted code monkeys bullshit)
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119878488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9eaaaff2ea8ba46ac2613650a43836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageParticleSystem: {fileID: 0}
+  healParticleSystem: {fileID: 0}
 --- !u!114 &2119878497
 =======
   healthAmountMax: 100
