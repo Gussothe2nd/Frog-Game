@@ -1687,6 +1687,7 @@ GameObject:
   - component: {fileID: 947228286}
   - component: {fileID: 947228285}
   - component: {fileID: 947228284}
+  - component: {fileID: 947228289}
   m_Layer: 0
   m_Name: HealthCube
   m_TagString: Untagged
@@ -1736,7 +1737,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947228283}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1806,6 +1807,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &947228289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947228283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4141cd5eaf83f4c4da2f8c4cd5b387ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &972875625
 GameObject:
   m_ObjectHideFlags: 0
@@ -6080,7 +6093,11 @@ MonoBehaviour:
   aimColliderLayerMask:
     serializedVersion: 2
     m_Bits: 1
+  ShortRaycastColliderLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   debugTransform: {fileID: 256159774}
+  debugShortTransform: {fileID: 0}
   pfBulletProjectile: {fileID: 8210991715225066259, guid: 54599d880936cab44ba4440b4c4311a1, type: 3}
   spawnBulletPosition: {fileID: 972875626}
   SkillTreeCanvas: {fileID: 0}
@@ -6112,10 +6129,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b11770b1d9efa4b88e27aa96758b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnPlayerPos: {fileID: 0}
   pfFireBlast: {fileID: 8417816215059511349, guid: 11c9ae44a02ec4349966b8b399e30f4a, type: 3}
-  SpawnFireBlastPos: {fileID: 282367839}
-  pfBeam: {fileID: 8654540180276383126, guid: 9393719a20c72cb419e4294b62f78130, type: 3}
+  pfForceField: {fileID: 0}
   SpawnInFrontOfCharacterAbility: {fileID: 596501886}
+  pfWallForceField: {fileID: 0}
+  pfBeam: {fileID: 8654540180276383126, guid: 9393719a20c72cb419e4294b62f78130, type: 3}
   pfFireWall: {fileID: 5642328356279049328, guid: 42ed9e03865bfba42b73551429d3b6e0, type: 3}
 --- !u!114 &6982812147933622151
 MonoBehaviour:
