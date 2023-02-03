@@ -15,6 +15,11 @@ public class Projectile : MonoBehaviour
         Physics.IgnoreLayerCollision(8 , 9);
     }
 
+    private void Update()
+    {
+        Physics.IgnoreLayerCollision(8, 9);
+    }
+
     private void Start()
     {
         float speed = 10f;
