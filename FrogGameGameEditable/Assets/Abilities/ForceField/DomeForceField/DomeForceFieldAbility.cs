@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class ForceFieldAbility : BaseAbilityClass
+public class DomeForceFieldAbility : BaseAbilityClass
 {
     //public AbilityHolder abilityHolder;
 

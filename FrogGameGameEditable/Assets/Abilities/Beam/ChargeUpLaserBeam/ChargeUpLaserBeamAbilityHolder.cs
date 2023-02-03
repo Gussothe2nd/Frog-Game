@@ -2,19 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ForceFieldAbilityHolder : MonoBehaviour
+public class ChargeUpLaserBeamAbilityHolder : MonoBehaviour
 {
     public BaseAbilityClass ability;
     public AbilityVisual CoolDownVisual;
     float cooldownTime;
     float activeTime;
 
-    //private void Awake()
-    //{
-        //ThirdPersonShooterController = GetComponent<ThirdPersonShooterController>();
-    //}
-
-    //private ThirdPersonShooterController ThirdPersonShooterController;
 
     void Start()
     {
@@ -44,8 +38,6 @@ public class ForceFieldAbilityHolder : MonoBehaviour
                     ability.Activate(gameObject);
                     state = AbilityState.active;
                     activeTime = ability.activeTime;
-                    //UpdateAbilityVisual(cooldownTime);
-
                 }
             break;
 
@@ -57,7 +49,6 @@ public class ForceFieldAbilityHolder : MonoBehaviour
                 }
                 else
                 {
-                    //ability.BeginCooldown(gameObject);
                     state = AbilityState.cooldown;
                     cooldownTime = ability.cooldownTime;
                 }
@@ -82,17 +73,4 @@ public class ForceFieldAbilityHolder : MonoBehaviour
     {
         CoolDownVisual.ShowCoolDownTime(cooldownTime);
     }
-
-
-
-    //public void FireAbility(bool activeTime)
-    //{
-        //ability.EnableLaser(true);
-    //}
-
-    //public void UpdateLaserPosition()
-    //{
-    //}
-
-
 }
