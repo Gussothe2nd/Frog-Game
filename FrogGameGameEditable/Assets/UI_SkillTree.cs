@@ -21,8 +21,12 @@ public class UI_SkillTree : MonoBehaviour
     public GameObject fireBlastAbilityVisualCooldown;
 
     //ability slot 2
-    private ForceFieldAbilityHolder forceFieldAbilityHolder;
-    public GameObject forceFieldAbilityVisualCooldown;
+
+    private WallForceFieldAbilityHolder wallForceFieldAbilityHolder;
+    public GameObject wallForceFieldAbilityVisualCooldown;
+
+    private DomeForceFieldAbilityHolder domeForceFieldAbilityHolder;
+    public GameObject domeForceFieldAbilityVisualCooldown;
 
     //ability slot 2
     private LaserBeamAbilityHolder laserBeamAbilityHolder;
@@ -32,8 +36,13 @@ public class UI_SkillTree : MonoBehaviour
     {
         //ability slot 1
         fireBlastAbilityHolder = player.GetComponent<FireBlastAbilityHolder>();
+
         //ability slot 2
-        forceFieldAbilityHolder = player.GetComponent<ForceFieldAbilityHolder>();
+
+        wallForceFieldAbilityHolder = player.GetComponent<WallForceFieldAbilityHolder>();
+
+        domeForceFieldAbilityHolder = player.GetComponent<DomeForceFieldAbilityHolder>();
+
         //ability slot 2
         laserBeamAbilityHolder = player.GetComponent<LaserBeamAbilityHolder>();
     }
@@ -44,11 +53,19 @@ public class UI_SkillTree : MonoBehaviour
         fireBlastAbilityHolder.enabled = true;
         fireBlastAbilityVisualCooldown.gameObject.SetActive(true);
     }
+
     //ability slot 2
-    public void EnableForceFieldAbility()
+
+    public void EnableWallForceFieldAbility()
     {
-        forceFieldAbilityHolder.enabled = true;
-        forceFieldAbilityVisualCooldown.gameObject.SetActive(true);
+        wallForceFieldAbilityHolder.enabled = true;
+        laserBeamAbilityVisualCooldown.gameObject.SetActive(true);
+    }
+
+    public void EnableDomeForceFieldAbility()
+    {
+        domeForceFieldAbilityHolder.enabled = true;
+        domeForceFieldAbilityVisualCooldown.gameObject.SetActive(true);
     }
     //ability slot 3
     public void EnableLaserBeamAbility()
