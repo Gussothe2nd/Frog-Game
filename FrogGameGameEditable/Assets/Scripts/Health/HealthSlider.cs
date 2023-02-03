@@ -17,30 +17,27 @@ public class HealthSlider : MonoBehaviour
     [SerializeField]
     private TMP_Text _hpIndicator;
 
+  
 
 
-    // Start is called before the first frame update
-    void Start()
+    public void SetMaxHealth( int health)
     {
+        _slider.maxValue = health;
+        _slider.value = health;
+       
         
+        _hpIndicator.SetText("Max");
     }
-
-    // Update is called once per frame
-    void Update()
+    public void SetHealth(int health)
     {
+        _slider.value = health;
+        //newValue = _health.Hp;
+
+           //(int)_slider.value = _health.Hp;
         
-    }
-    public void SetMaxHealth( int maxHealth)
-    {
-        maxHealth = _health.MaxHp;
-        _slider.maxValue = maxHealth;
-        _hpIndicator.SetText($"{maxHealth}/{maxHealth}");
-    }
-    public void SetHealth(int newValue)
-    {
-        newValue = (int)_slider.value - _health.Hp;
-
-        _hpIndicator.SetText($"{newValue}/{_health.Hp}");
+        _hpIndicator.SetText($"{health}/{_health.MaxHp}");
 
     }
+
+   
 }

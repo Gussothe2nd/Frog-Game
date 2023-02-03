@@ -1,7 +1,7 @@
 using UnityEngine;
 
-namespace CodeMonkey.HealthSystemCM
-{
+//namespace CodeMonkey.HealthSystemCM
+//{
 
     /// <summary>
     /// Demo Unit
@@ -11,42 +11,42 @@ namespace CodeMonkey.HealthSystemCM
     public class BasicFool : MonoBehaviour
     {
 
-        [SerializeField] private ParticleSystem damageParticleSystem;
-        [SerializeField] private ParticleSystem healParticleSystem;
+    //    [SerializeField] private ParticleSystem damageParticleSystem;
+      //  [SerializeField] private ParticleSystem healParticleSystem;
 
-        private HealthSystem healthSystem;
+       // private HealthSystem healthSystem;
 
 
-        private void Start()
-        {
-            healthSystem = GetComponent<HealthSystemComponent>().GetHealthSystem();
+ //       private void Start()
+   //     {
+  //          healthSystem = GetComponent<HealthSystemComponent>().GetHealthSystem();
 
-            healthSystem.OnDead += HealthSystem_OnDead;
-            healthSystem.OnDamaged += HealthSystem_OnDamaged;
-            healthSystem.OnHealed += HealthSystem_OnHealed;
-        }
+    //        healthSystem.OnDead += HealthSystem_OnDead;
+      //      healthSystem.OnDamaged += HealthSystem_OnDamaged;
+        //    healthSystem.OnHealed += HealthSystem_OnHealed;
+       // }
 
-        private void HealthSystem_OnHealed(object sender, System.EventArgs e)
-        {
-            healParticleSystem.Play();
-        }
+//        private void HealthSystem_OnHealed(object sender, System.EventArgs e)
+  //      {
+//            healParticleSystem.Play();
+//        }
 
-        private void HealthSystem_OnDamaged(object sender, System.EventArgs e)
-        {
-            damageParticleSystem.Play();
-        }
+//        private void HealthSystem_OnDamaged(object sender, System.EventArgs e)
+//        {
+//            damageParticleSystem.Play();
+//        }
 
-        private void HealthSystem_OnDead(object sender, System.EventArgs e)
-        {
-            transform.eulerAngles = new Vector3(0, 0, -90);
-            damageParticleSystem.Play();
-        }
+//        private void HealthSystem_OnDead(object sender, System.EventArgs e)
+//        {
+//            transform.eulerAngles = new Vector3(0, 0, -90);
+  //          damageParticleSystem.Play();
+   //     }
 
-        private void Damage()
-        {
-            healthSystem.Damage(25);
-        }
+     //   private void Damage()
+       // {
+//            healthSystem.Damage(25);
+//        }
 
-    }
+  //  }
 
 }
