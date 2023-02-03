@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90aca793e5b0fe445ba683d5b7115c98, type: 3}
-  m_Name: BeamAbility
+  m_Script: {fileID: 11500000, guid: b88e01da49ea36e4991d80fd0418ae86, type: 3}
+  m_Name: Force Field Ability
   m_EditorClassIdentifier: 
   name: 
-  cooldownTime: 2
-  activeTime: 99
+  cooldownTime: 3
+  activeTime: 10
+  FireBlastRange: 0

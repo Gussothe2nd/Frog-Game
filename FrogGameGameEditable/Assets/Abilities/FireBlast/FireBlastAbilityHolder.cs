@@ -2,19 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AbilityHolder : MonoBehaviour
+public class FireBlastAbilityHolder : MonoBehaviour
 {
     public BaseAbilityClass ability;
     public AbilityVisual CoolDownVisual;
     float cooldownTime;
     float activeTime;
 
-    //private void Awake()
-    //{
-        //ThirdPersonShooterController = GetComponent<ThirdPersonShooterController>();
-    //}
-
-    //private ThirdPersonShooterController ThirdPersonShooterController;
 
     void Start()
     {
@@ -44,16 +38,9 @@ public class AbilityHolder : MonoBehaviour
                     ability.Activate(gameObject);
                     state = AbilityState.active;
                     activeTime = ability.activeTime;
-                    //UpdateAbilityVisual(cooldownTime);
-                    //FireAbility(true);
-
                 }
             break;
-                //case AbilityState.ready
-                    //if (MultipleShots(true))
-                //{
 
-                //}
             case AbilityState.active:
                 if (activeTime > 0)
                 {
@@ -62,7 +49,6 @@ public class AbilityHolder : MonoBehaviour
                 }
                 else
                 {
-                    //ability.BeginCooldown(gameObject);
                     state = AbilityState.cooldown;
                     cooldownTime = ability.cooldownTime;
                 }
@@ -87,17 +73,4 @@ public class AbilityHolder : MonoBehaviour
     {
         CoolDownVisual.ShowCoolDownTime(cooldownTime);
     }
-
-
-
-    //public void FireAbility(bool activeTime)
-    //{
-        //ability.EnableLaser(true);
-    //}
-
-    //public void UpdateLaserPosition()
-    //{
-    //}
-
-
 }

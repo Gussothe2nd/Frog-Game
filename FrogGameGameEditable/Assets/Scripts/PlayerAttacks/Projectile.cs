@@ -12,6 +12,7 @@ public class Projectile : MonoBehaviour
     private void Awake()
     {
         bulletRigidbody = GetComponent<Rigidbody>();
+        Physics.IgnoreLayerCollision(8 , 9);
     }
 
     private void Start()

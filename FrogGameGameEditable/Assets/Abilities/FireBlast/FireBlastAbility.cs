@@ -17,7 +17,7 @@ public class FireBlastAbility : BaseAbilityClass
 
         AbilityList abilityList = parent.GetComponent<AbilityList>();
 
-        SpawnedFireBlast = Instantiate(abilityList.pfFireBlast, abilityList.SpawnFireBlastPos.position, abilityList.SpawnFireBlastPos.rotation) as GameObject;
+        SpawnedFireBlast = Instantiate(abilityList.pfFireBlast, abilityList.SpawnPlayerPos.position, abilityList.SpawnPlayerPos.rotation) as GameObject;
 
     }
 
