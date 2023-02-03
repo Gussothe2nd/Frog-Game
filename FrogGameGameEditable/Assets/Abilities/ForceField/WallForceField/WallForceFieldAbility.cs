@@ -34,7 +34,6 @@ public class WallForceFieldAbility : BaseAbilityClass
 
         Vector3 aimDir = (mouseWorldPosition - thirdPersonShooterController.spawnBulletPosition.position).normalized;
 
-            //spawnedWallForceField = Instantiate(abilityList.pfWallForceField, thirdPersonShooterController.spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up)) as GameObject;
             spawnedWallForceField = Instantiate(abilityList.pfWallForceField, raycastHit.point, Quaternion.LookRotation(aimDir, Vector3.up)) as GameObject;
     }
     //public override void ActivateMultiple(GameObject parent)

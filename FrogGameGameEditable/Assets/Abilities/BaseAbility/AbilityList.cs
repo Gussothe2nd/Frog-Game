@@ -27,6 +27,7 @@ public class AbilityList : MonoBehaviour
 
     //ability slot 2
     [SerializeField] public GameObject pfWallForceField;
+    [SerializeField] public GameObject pfPersonalForceField;
 
     //ability slot 3
     [SerializeField] public GameObject pfBeam;
