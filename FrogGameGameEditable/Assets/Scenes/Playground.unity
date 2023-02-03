@@ -1687,7 +1687,10 @@ GameObject:
   - component: {fileID: 947228286}
   - component: {fileID: 947228285}
   - component: {fileID: 947228284}
+<<<<<<< HEAD
   - component: {fileID: 947228289}
+=======
+>>>>>>> parent of a657c177 (Deleted code monkeys bullshit)
   m_Layer: 0
   m_Name: HealthCube
   m_TagString: Untagged
@@ -1737,7 +1740,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947228283}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1807,18 +1810,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &947228289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 947228283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4141cd5eaf83f4c4da2f8c4cd5b387ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &972875625
 GameObject:
   m_ObjectHideFlags: 0
@@ -3605,6 +3596,10 @@ GameObject:
   - component: {fileID: 2119878494}
   - component: {fileID: 2119878491}
   - component: {fileID: 2119878495}
+<<<<<<< HEAD
+=======
+  - component: {fileID: 2119878496}
+>>>>>>> parent of a657c177 (Deleted code monkeys bullshit)
   - component: {fileID: 2119878497}
   - component: {fileID: 2119878498}
   - component: {fileID: 2119878500}
@@ -3659,6 +3654,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eb9aa7183709da429076edc5294507b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+--- !u!114 &2119878497
+=======
+  healthAmountMax: 100
+  startingHealthAmount: 0
+--- !u!114 &2119878496
+>>>>>>> parent of a657c177 (Deleted code monkeys bullshit)
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119878488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9eaaaff2ea8ba46ac2613650a43836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageParticleSystem: {fileID: 0}
+  healParticleSystem: {fileID: 0}
 --- !u!114 &2119878497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3775,7 +3790,6 @@ MonoBehaviour:
   sprint: 0
   aim: 0
   shoot: 0
-  openSkillTree: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -6100,8 +6114,6 @@ MonoBehaviour:
   debugShortTransform: {fileID: 0}
   pfBulletProjectile: {fileID: 8210991715225066259, guid: 54599d880936cab44ba4440b4c4311a1, type: 3}
   spawnBulletPosition: {fileID: 972875626}
-  SkillTreeCanvas: {fileID: 0}
-  key: 0
 --- !u!114 &6982812147933622149
 MonoBehaviour:
   m_ObjectHideFlags: 0

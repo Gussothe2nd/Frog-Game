@@ -20,7 +20,6 @@ public class EnemyAI : MonoBehaviour
     }
 
     // Update is called once per frame
-    
     void Update()
     {
         float distance = Vector3.Distance(target.position, transform.position);
@@ -31,7 +30,7 @@ public class EnemyAI : MonoBehaviour
 
             if (distance <= agent.stoppingDistance)
             {
-               // Attack the Target
+                // Attack the Target
                 FaceTarget();
             }
 
