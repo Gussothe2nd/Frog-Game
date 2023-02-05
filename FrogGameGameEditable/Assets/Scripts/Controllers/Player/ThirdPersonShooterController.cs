@@ -94,7 +94,7 @@ public class ThirdPersonShooterController : MonoBehaviour
                 //thirdPersonController.SetRotateOnMove(true);
          }
 
-        // attempt to make skillTreeOverlay
+        // skillTreeOverlay
         if (starterAssetsInputs.openSkillTree)
         {
             SkillTreeCanvas.gameObject.SetActive(true);

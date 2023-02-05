@@ -21,13 +21,13 @@ public class RecieveLevelSystem : MonoBehaviour
         Debug.Log("Level Up");
     }
 
-    public KeyCode key;
+    //public KeyCode key;
 
-    void Update()
-    {
-        if (Input.GetKeyDown(key))
-        {
-            Debug.Log("Level Up");
-        }
-    }
+    //void Update()
+    //{
+        //if (Input.GetKeyDown(key))
+        //{
+            //Debug.Log("Level Up");
+        //}
+    //}
 }
