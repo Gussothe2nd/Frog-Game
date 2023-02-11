@@ -18,7 +18,7 @@ public class LevelWindow : MonoBehaviour
 
     private void Awake()
     {
-        levelText = transform.Find("levelDisplay").GetComponent<Text>();
+        levelText = transform.Find("levelDisplayText").GetComponent<Text>();
         
         //experienceBarFill = transform.Find("ExperienceBar").Find("Fill").GetComponent<Image>();
         experienceBarFill = transform.Find("ExperienceBar").GetComponent<Slider>();
