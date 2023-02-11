@@ -17,14 +17,25 @@ public class UseSkillPoints : MonoBehaviour
     private DeactivatePersonalShieldButton deactivatePersonalShieldButton;
     public GameObject SetPersonalShieldActive;
 
-    //ability slot 2->3
-    //public GameObject
+    //ability slot 3
+    private DeactivateLaserButton deactivateLaserButton;
+    public GameObject SetLaserActive;
+
+    private DeactivateIntenseLaserButton deactivateIntenseLaserButton;
+    public GameObject SetIntenseLaserActive;
+
+    private DeactivateChargeLaserButton deactivateChargeLaserButton;
+    public GameObject SetChargeLaserActive;
 
     void Awake()
     {
         deactivateWallShieldButton = DeactivateUnlessUnlocked.GetComponent<DeactivateWallShieldButton>();
         deactivateDomeShieldButton = DeactivateUnlessUnlocked.GetComponent<DeactivateDomeShieldButton>();
         deactivatePersonalShieldButton = DeactivateUnlessUnlocked.GetComponent<DeactivatePersonalShieldButton>();
+
+        deactivateLaserButton = DeactivateUnlessUnlocked.GetComponent<DeactivateLaserButton>();
+        deactivateIntenseLaserButton = DeactivateUnlessUnlocked.GetComponent<DeactivateIntenseLaserButton>();
+        deactivateChargeLaserButton = DeactivateUnlessUnlocked.GetComponent<DeactivateChargeLaserButton>();
     }
     public void UnlockWallShield()
     {
@@ -62,6 +73,54 @@ public class UseSkillPoints : MonoBehaviour
         {
             deactivatePersonalShieldButton.enabled = false;
             SetPersonalShieldActive.gameObject.SetActive(true);
+        }
+
+        //if(XP)
+        //{
+        // SkillPoint > 0 
+        // -1 skillpoint
+        // deactivateWallShieldButton = false
+        //}
+    }
+
+    //ability slot 3
+
+    public void UnlockLaser()
+    {
+        deactivateLaserButton.enabled = false;
+        SetLaserActive.gameObject.SetActive(true);
+
+        //if(XP)
+        //{
+        // SkillPoint > 0 
+        // -1 skillpoint
+        // deactivateWallShieldButton = false
+        //}
+    }
+
+    public void UnlockIntenseLaser()
+    {
+        if (deactivateLaserButton.enabled == false)
+        {
+            deactivateIntenseLaserButton.enabled = false;
+            SetIntenseLaserActive.gameObject.SetActive(true);
+        }
+
+
+        //if(XP)
+        //{
+        // SkillPoint > 0 
+        // -1 skillpoint
+        // deactivateWallShieldButton = false
+        //}
+    }
+
+    public void UnlockChargeLaser()
+    {
+        if (deactivateIntenseLaserButton.enabled == false)
+        {
+            deactivateChargeLaserButton.enabled = false;
+            SetChargeLaserActive.gameObject.SetActive(true);
         }
 
         //if(XP)

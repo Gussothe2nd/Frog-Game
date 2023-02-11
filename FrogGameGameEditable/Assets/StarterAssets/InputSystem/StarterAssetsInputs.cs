@@ -15,7 +15,7 @@ namespace StarterAssets
         public bool aim;
         public bool shoot;
 		public bool openSkillTree;
-		//public bool closeSkillTree
+		public float zoomScrollWheel;
 		
 
         [Header("Movement Settings")]
@@ -63,6 +63,11 @@ namespace StarterAssets
 		{
 			SkillTreeInput(value.isPressed);
 		}		
+
+		public void OnZoomSkillTree(InputValue value)
+		{
+			ZoomScrollWheelInput(value.Get<float>());
+		}	
 		
 	
 
@@ -104,6 +109,11 @@ namespace StarterAssets
 		public void SkillTreeInput(bool newCanvasState)
         {
             openSkillTree = newCanvasState;
+        }
+
+        public void ZoomScrollWheelInput(float newZoomCanvasState)
+        {
+            zoomScrollWheel = newZoomCanvasState;
         }
 
         private void OnApplicationFocus(bool hasFocus)

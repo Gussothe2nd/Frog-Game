@@ -73,37 +73,81 @@ public class UI_SkillTree : MonoBehaviour
 
     public void EnableWallForceFieldAbility()
     {
+        
         wallForceFieldAbilityHolder.enabled = true;
         wallForceFieldAbilityVisualCooldown.gameObject.SetActive(true);
+
+        //disable others
+        domeForceFieldAbilityHolder.enabled = false;
+        domeForceFieldAbilityVisualCooldown.gameObject.SetActive(false);
+
+        personalForceFieldAbilityHolder.enabled = false;
+        personalForceFieldAbilityVisualCooldown.gameObject.SetActive(false);
+
     }
 
     public void EnableDomeForceFieldAbility()
     {
         domeForceFieldAbilityHolder.enabled = true;
         domeForceFieldAbilityVisualCooldown.gameObject.SetActive(true);
+
+        //disable others
+        wallForceFieldAbilityHolder.enabled = false;
+        wallForceFieldAbilityVisualCooldown.gameObject.SetActive(false);
+
+        personalForceFieldAbilityHolder.enabled = false;
+        personalForceFieldAbilityVisualCooldown.gameObject.SetActive(false);
     }
 
     public void EnablePersonalForceFieldAbility()
     {
         personalForceFieldAbilityHolder.enabled = true;
         personalForceFieldAbilityVisualCooldown.gameObject.SetActive(true);
+
+        //disable others
+        wallForceFieldAbilityHolder.enabled = false;
+        wallForceFieldAbilityVisualCooldown.gameObject.SetActive(false);
+
+        domeForceFieldAbilityHolder.enabled = false;
+        domeForceFieldAbilityVisualCooldown.gameObject.SetActive(false);
     }
     //ability slot 3
     public void EnableLaserBeamAbility()
     {
         laserBeamAbilityHolder.enabled = true;
         laserBeamAbilityVisualCooldown.gameObject.SetActive(true);
-    } 
-    
+
+        //disable others
+        intenseLaserBeamAbilityHolder.enabled = false;
+        intenselaserBeamAbilityVisualCooldown.gameObject.SetActive(false);
+
+        chargeUpLaserBeamAbilityHolder.enabled = false;
+        ChargeUplaserBeamAbilityVisualCooldown.gameObject.SetActive(false);
+    }
+
     public void EnableIntenseLaserBeamAbility()
     {
         intenseLaserBeamAbilityHolder.enabled = true;
         intenselaserBeamAbilityVisualCooldown.gameObject.SetActive(true);
-    } 
-    
+
+        //disable others
+        laserBeamAbilityHolder.enabled = false;
+        laserBeamAbilityVisualCooldown.gameObject.SetActive(false);
+
+        chargeUpLaserBeamAbilityHolder.enabled = false;
+        ChargeUplaserBeamAbilityVisualCooldown.gameObject.SetActive(false);
+    }
+
     public void EnableChargeUpLaserBeamAbility()
     {
         chargeUpLaserBeamAbilityHolder.enabled = true;
         ChargeUplaserBeamAbilityVisualCooldown.gameObject.SetActive(true);
+
+        //disable others
+        laserBeamAbilityHolder.enabled = false;
+        laserBeamAbilityVisualCooldown.gameObject.SetActive(false);
+
+        intenseLaserBeamAbilityHolder.enabled = false;
+        intenselaserBeamAbilityVisualCooldown.gameObject.SetActive(false);
     }
 }
