@@ -32,6 +32,16 @@ public class LevelSystem
         if (OnExperienceChanged != null) OnExperienceChanged(this, EventArgs.Empty);
     }
 
+    public void TakeExperiencePoint(int amount)
+    {
+        //experience -= amount;
+
+        level -= amount;
+
+        if (OnLevelChanged != null) OnLevelChanged(this, EventArgs.Empty);
+    }
+
+
     public int GetLevelNumber()
     {
         return level;

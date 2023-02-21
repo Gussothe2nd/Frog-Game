@@ -5,11 +5,6 @@ using UnityEngine.InputSystem;
 
 public class UI_SkillTree : MonoBehaviour
 {
-    //test/learning
-    public void Fart()
-    {
-        print("fart");
-    }
 
     //player reference
     public GameObject player;
@@ -28,8 +23,8 @@ public class UI_SkillTree : MonoBehaviour
     private DomeForceFieldAbilityHolder domeForceFieldAbilityHolder;
     public GameObject domeForceFieldAbilityVisualCooldown;
 
-    private PersonalForceFieldAbilityHolder personalForceFieldAbilityHolder;
-    public GameObject personalForceFieldAbilityVisualCooldown;
+    //private PersonalForceFieldAbilityHolder personalForceFieldAbilityHolder;
+    //public GameObject personalForceFieldAbilityVisualCooldown;
 
     //ability slot 3
     private LaserBeamAbilityHolder laserBeamAbilityHolder;
@@ -38,8 +33,8 @@ public class UI_SkillTree : MonoBehaviour
     private IntenseLaserBeamAbilityHolder intenseLaserBeamAbilityHolder;
     public GameObject intenselaserBeamAbilityVisualCooldown;
 
-    private ChargeUpLaserBeamAbilityHolder chargeUpLaserBeamAbilityHolder;
-    public GameObject ChargeUplaserBeamAbilityVisualCooldown;
+    //private ChargeUpLaserBeamAbilityHolder chargeUpLaserBeamAbilityHolder;
+    //public GameObject ChargeUplaserBeamAbilityVisualCooldown;
 
     public void Awake()
     {
@@ -52,14 +47,14 @@ public class UI_SkillTree : MonoBehaviour
 
         domeForceFieldAbilityHolder = player.GetComponent<DomeForceFieldAbilityHolder>();
 
-        personalForceFieldAbilityHolder = player.GetComponent<PersonalForceFieldAbilityHolder>();
+        //personalForceFieldAbilityHolder = player.GetComponent<PersonalForceFieldAbilityHolder>();
 
         //ability slot 3
         laserBeamAbilityHolder = player.GetComponent<LaserBeamAbilityHolder>();
 
         intenseLaserBeamAbilityHolder = player.GetComponent<IntenseLaserBeamAbilityHolder>();
 
-        chargeUpLaserBeamAbilityHolder = player.GetComponent<ChargeUpLaserBeamAbilityHolder>();
+        //chargeUpLaserBeamAbilityHolder = player.GetComponent<ChargeUpLaserBeamAbilityHolder>();
     }
 
     //ability slot 1
@@ -81,8 +76,8 @@ public class UI_SkillTree : MonoBehaviour
         domeForceFieldAbilityHolder.enabled = false;
         domeForceFieldAbilityVisualCooldown.gameObject.SetActive(false);
 
-        personalForceFieldAbilityHolder.enabled = false;
-        personalForceFieldAbilityVisualCooldown.gameObject.SetActive(false);
+        //personalForceFieldAbilityHolder.enabled = false;
+        //personalForceFieldAbilityVisualCooldown.gameObject.SetActive(false);
 
     }
 
@@ -95,22 +90,22 @@ public class UI_SkillTree : MonoBehaviour
         wallForceFieldAbilityHolder.enabled = false;
         wallForceFieldAbilityVisualCooldown.gameObject.SetActive(false);
 
-        personalForceFieldAbilityHolder.enabled = false;
-        personalForceFieldAbilityVisualCooldown.gameObject.SetActive(false);
+        //personalForceFieldAbilityHolder.enabled = false;
+        //personalForceFieldAbilityVisualCooldown.gameObject.SetActive(false);
     }
 
-    public void EnablePersonalForceFieldAbility()
-    {
-        personalForceFieldAbilityHolder.enabled = true;
-        personalForceFieldAbilityVisualCooldown.gameObject.SetActive(true);
+    //public void EnablePersonalForceFieldAbility()
+   //{
+        //personalForceFieldAbilityHolder.enabled = true;
+        //personalForceFieldAbilityVisualCooldown.gameObject.SetActive(true);
 
         //disable others
-        wallForceFieldAbilityHolder.enabled = false;
-        wallForceFieldAbilityVisualCooldown.gameObject.SetActive(false);
+        //wallForceFieldAbilityHolder.enabled = false;
+        //wallForceFieldAbilityVisualCooldown.gameObject.SetActive(false);
 
-        domeForceFieldAbilityHolder.enabled = false;
-        domeForceFieldAbilityVisualCooldown.gameObject.SetActive(false);
-    }
+        //domeForceFieldAbilityHolder.enabled = false;
+        //domeForceFieldAbilityVisualCooldown.gameObject.SetActive(false);
+    //}
     //ability slot 3
     public void EnableLaserBeamAbility()
     {
@@ -121,8 +116,8 @@ public class UI_SkillTree : MonoBehaviour
         intenseLaserBeamAbilityHolder.enabled = false;
         intenselaserBeamAbilityVisualCooldown.gameObject.SetActive(false);
 
-        chargeUpLaserBeamAbilityHolder.enabled = false;
-        ChargeUplaserBeamAbilityVisualCooldown.gameObject.SetActive(false);
+        //chargeUpLaserBeamAbilityHolder.enabled = false;
+        //ChargeUplaserBeamAbilityVisualCooldown.gameObject.SetActive(false);
     }
 
     public void EnableIntenseLaserBeamAbility()
@@ -134,20 +129,20 @@ public class UI_SkillTree : MonoBehaviour
         laserBeamAbilityHolder.enabled = false;
         laserBeamAbilityVisualCooldown.gameObject.SetActive(false);
 
-        chargeUpLaserBeamAbilityHolder.enabled = false;
-        ChargeUplaserBeamAbilityVisualCooldown.gameObject.SetActive(false);
+        //chargeUpLaserBeamAbilityHolder.enabled = false;
+        //ChargeUplaserBeamAbilityVisualCooldown.gameObject.SetActive(false);
     }
 
-    public void EnableChargeUpLaserBeamAbility()
-    {
-        chargeUpLaserBeamAbilityHolder.enabled = true;
-        ChargeUplaserBeamAbilityVisualCooldown.gameObject.SetActive(true);
+    //public void EnableChargeUpLaserBeamAbility()
+    //{
+        //chargeUpLaserBeamAbilityHolder.enabled = true;
+        //ChargeUplaserBeamAbilityVisualCooldown.gameObject.SetActive(true);
 
         //disable others
-        laserBeamAbilityHolder.enabled = false;
-        laserBeamAbilityVisualCooldown.gameObject.SetActive(false);
+        //laserBeamAbilityHolder.enabled = false;
+        //laserBeamAbilityVisualCooldown.gameObject.SetActive(false);
 
-        intenseLaserBeamAbilityHolder.enabled = false;
-        intenselaserBeamAbilityVisualCooldown.gameObject.SetActive(false);
-    }
+        //intenseLaserBeamAbilityHolder.enabled = false;
+        //intenselaserBeamAbilityVisualCooldown.gameObject.SetActive(false);
+    //}
 }

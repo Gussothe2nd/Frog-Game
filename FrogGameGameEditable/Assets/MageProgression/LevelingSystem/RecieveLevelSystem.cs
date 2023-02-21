@@ -18,7 +18,7 @@ public class RecieveLevelSystem : MonoBehaviour
 
     private void LevelSystem_OnLevelChanged(object sender, EventArgs e)
     {
-        Debug.Log("Level Up");
+        Debug.Log("Level Changed");
     }
 
     //public KeyCode key;
