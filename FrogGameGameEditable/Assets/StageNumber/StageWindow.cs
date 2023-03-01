@@ -58,7 +58,7 @@ public class StageWindow : MonoBehaviour
 
     private void SetStageNumber(int stageNumber)
     {
-        stageText.text = "STAGE\n" + (stageNumber + 1);
+        stageText.text = "STAGE\n" + (stageNumber);
     }
 
 
