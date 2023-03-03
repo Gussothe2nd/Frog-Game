@@ -5,7 +5,7 @@ using UnityEngine;
 public class DamageCube : MonoBehaviour
 {
   
-    private void OnTriggerEnter3D(Collider col)
+    private void OnTriggerEnter(Collider col)
     {
         if (col.TryGetComponent<Health>(out var health))
         health.Damage(10);
