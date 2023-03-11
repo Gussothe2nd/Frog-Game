@@ -1737,7 +1737,7 @@ GameObject:
   - component: {fileID: 345087123}
   - component: {fileID: 345087124}
   m_Layer: 6
-  m_Name: EnableUpgrade(RandomlyPicks)
+  m_Name: Enable Layer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1781,18 +1781,48 @@ MonoBehaviour:
   Level4: {fileID: 1524887021}
   Level5: {fileID: 91304726}
   Level6: {fileID: 548888333}
-  FL1: {fileID: 0}
-  FL2: {fileID: 0}
-  FL3: {fileID: 0}
-  FM1: {fileID: 0}
-  FM2: {fileID: 0}
-  FM3: {fileID: 0}
-  FM4: {fileID: 0}
-  FM5: {fileID: 0}
-  FM6: {fileID: 0}
-  FR1: {fileID: 0}
-  FR2: {fileID: 0}
-  FR3: {fileID: 0}
+  DL1: {fileID: 1710615963}
+  DL2: {fileID: 654965872}
+  DM1: {fileID: 1715705374}
+  DM2: {fileID: 25187607}
+  DM3: {fileID: 353592176}
+  DR1: {fileID: 760490767}
+  DR2: {fileID: 2117148391}
+  EL1: {fileID: 763871305}
+  EL2: {fileID: 870696867}
+  EL3: {fileID: 725141007}
+  EM1: {fileID: 542291806}
+  EM2: {fileID: 490110677}
+  EM3: {fileID: 1447399104}
+  EM4: {fileID: 1572611778}
+  ER1: {fileID: 410778488}
+  ER2: {fileID: 1941238183}
+  ER3: {fileID: 820172041}
+  FL1: {fileID: 257593644}
+  FL2: {fileID: 766317661}
+  FL3: {fileID: 1999761111}
+  FM1: {fileID: 2099820704}
+  FM2: {fileID: 1816295087}
+  FM3: {fileID: 584063482}
+  FM4: {fileID: 2014924874}
+  FM5: {fileID: 1771965660}
+  FM6: {fileID: 1650084528}
+  FR1: {fileID: 1396945241}
+  FR2: {fileID: 1039993808}
+  FR3: {fileID: 1699574533}
+  randomUpgradeExcluder: 0
+  leftNumberAlreadyChosen: 0
+  middleNumberAlreadyChosen: 0
+  rightNumberAlreadyChosen: 0
+  level4to5NumberReset: 1
+  level5to6NumberReset: 1
+  LeftNumber: 0
+  ELeftMiddleNumber: 0
+  ERightMiddleNumber: 0
+  MiddleNumber: 0
+  FLeftMiddleNumber: 0
+  FRightMiddleNumber: 0
+  RightNumber: 0
 --- !u!1 &353592176
 GameObject:
   m_ObjectHideFlags: 0
@@ -13788,7 +13818,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2036179475
 Transform:
   m_ObjectHideFlags: 0
